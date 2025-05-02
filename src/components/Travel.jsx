@@ -5,7 +5,7 @@ import { places } from '../Data/TravelData';
 
 export default function Travel() {
   const globeRef = useRef();
-  const [selectedPlace, setSelectedPlace] = useState(null); 
+  const [selectedPlace, setSelectedPlace] = useState(null); // Add this to track modal state
 
   useEffect(() => {
     const globe = globeRef.current;
@@ -15,10 +15,9 @@ export default function Travel() {
   
       // Enable auto-rotation
       globe.controls().autoRotate = true;
-      globe.controls().autoRotateSpeed = 0.5; 
+      globe.controls().autoRotateSpeed = 0.5; // Adjust speed here
     }
   }, []);
-  
 
   return (
     <div className="max-w-5xl mx-auto px-4 text-center">
@@ -28,19 +27,29 @@ export default function Travel() {
       </p>
 
       <div className="relative w-full h-[500px] rounded-xl overflow-hidden mb-10">
-        <Globe
-          ref={globeRef}
-          globeImageUrl="https://raw.githubusercontent.com/vasturiano/three-globe/master/example/img/earth-blue-marble.jpg"
-          backgroundColor="rgba(0,0,0,0)"
-          labelsData={places}
-          labelLat={(d) => d.lat}
-          labelLng={(d) => d.lng}
-          labelText={(d) => d.name}
-          labelSize={() => 1.2}
-          labelDotRadius={() => 0.5}
-          labelColor={() => "red"}
-          onLabelClick={(place) => setSelectedPlace(place)}
-        />
+      <Globe
+        ref={globeRef}
+        globeImageUrl="https://raw.githubusercontent.com/vasturiano/three-globe/master/example/img/earth-blue-marble.jpg"
+        backgroundColor="rgba(0,0,0,0)"
+        labelsData={[]} // Disable default labels
+        htmlElementsData={places}
+        htmlLat={(d) => d.lat}
+        htmlLng={(d) => d.lng}
+        htmlElement={(d) => {
+          const el = document.createElement('div');
+          el.innerHTML = `<span title="${d.name}" style="font-size: 24px; cursor: pointer;">📍</span>`;
+          el.style.pointerEvents = 'auto'; // allow interaction
+          el.style.transform = 'translate(-50%, -50%)'; // center emoji on point
+        
+          el.addEventListener('click', () => {
+            setSelectedPlace(d); // this works if setSelectedPlace is in scope
+          });
+        
+          return el;
+        }}
+      />      
+
+
       </div>
 
       {/* Modal for selected place */}

@@ -1,7 +1,7 @@
-import asakusa from '../assets/asakusa.jpg';
-import dc from '../assets/dc_image.jpg';
-import kauai from '../assets/kauai.jpg';
-import disney from '../assets/disney_image.jpg';
+import asakusa from '/assets/asakusa.jpg';
+import dc from '/assets/dc_image.jpg';
+import kauai from '/assets/kauai.jpg';
+import disney from '/assets/disney_image.jpg';
 import { motion } from "framer-motion";
 
 const images = [asakusa, dc, kauai, disney];
