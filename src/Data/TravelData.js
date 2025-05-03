@@ -17,7 +17,7 @@ export const places = [
     name: "Washington, DC",
     lat: 38.9072,
     lng: -77.0369,
-    imgs: ["/assets/dc.jpg"], // ✅
+    imgs: ["/assets/dc_image.jpg"], // ✅
     description: "Spent my summer for internship here. Love the city and the east coast.",
   },
   {
