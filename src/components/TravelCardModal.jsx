@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 
 export default function TravelCardModal({ place, onClose }) {
-  if (!place) return null;
+  if (!place) {
+    return null;
+  }
+  console.log("Rendering modal for:", place.name);
+
 
   const images = place?.imgs || [];
 
@@ -24,7 +28,7 @@ export default function TravelCardModal({ place, onClose }) {
               <img
                 src={images[0]}
                 alt="Travel"
-                className="w-full h-64 object-cover rounded-md"
+                className="w-full h-64 object-contain rounded-md bg-black"
               />
             ) : (
               <motion.div
@@ -42,7 +46,7 @@ export default function TravelCardModal({ place, onClose }) {
                     key={index}
                     src={src}
                     alt={`travel-${index}`}
-                    className="w-64 h-64 object-cover rounded-md flex-shrink-0 shadow-md"
+                    className="w-64 h-64 object-contain rounded-md flex-shrink-0 shadow-md bg-black"
                   />
                 ))}
               </motion.div>

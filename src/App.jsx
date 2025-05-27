@@ -4,7 +4,7 @@ import AboutMe from "./components/AboutMe";
 import Timeline from "./components/Timeline";
 import Travel from "./components/Travel";
 import ContactInfo from "./components/ContactInfo";
-
+import Strava from './components/Strava';
 export default function App() {
   return (
     <div className="bg-black text-white scroll-smooth font-sans">
@@ -24,6 +24,9 @@ export default function App() {
 
       <section id="travel" className="py-24 px-6 bg-black">
         <Travel />
+      </section>
+      <section id="strava" className="py-24 px-6 bg-black">
+        <Strava />
       </section>
 
       <section id="contact" className="py-24 px-6 bg-neutral-900">

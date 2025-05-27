@@ -1,6 +1,13 @@
 export default function Timeline() {
   const experiences = [
     {
+      title: "Associate Cloud Support", 
+      company: "Amazon Web Services",
+      period: "Incoming",
+      description:
+        "incoming",
+    },
+    {
       title: "Application Developer Intern", 
       company: "Calsoft Systems",
       period: "Fall 2024",

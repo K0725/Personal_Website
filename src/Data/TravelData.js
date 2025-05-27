@@ -3,21 +3,21 @@ export const places = [
     name: "Oahu, Hawaii",
     lat: 21.3069,
     lng: -157.8583,
-    imgs: ["/assets/hawaii1.jpg", "/assets/hawaii2.jpg"],
+    imgs: ["/assets/hawaii1.jpg", "/assets/hawaii2.jpg"], 
     description: "This is where I grew up! I love the beaches and the food.",
   },
   {
     name: "Los Angeles, CA",
     lat: 34.0522,
     lng: -118.2437,
-    imgs: ["/assets/golf_image.jpg"], // ✅ wrapped in array
+    imgs: ["/assets/golf_image.jpg", "/assets/LA2.jpg"], 
     description: "I've spent my college life here. I don't miss the traffic, but I met great people.",
   },
   {
     name: "Washington, DC",
     lat: 38.9072,
     lng: -77.0369,
-    imgs: ["/assets/dc_image.jpg"], // ✅
+    imgs: ["/assets/dc_image.jpg"],
     description: "Spent my summer for internship here. Love the city and the east coast.",
   },
   {

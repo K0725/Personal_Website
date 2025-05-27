@@ -19,7 +19,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
-        daily dreamer and engineer passoinate about building things and problem solving. 
+        day dreamer and engineer passoinate about building things and problem solving currently into running.
       </motion.p>
 
       
