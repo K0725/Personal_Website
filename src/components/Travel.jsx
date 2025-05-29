@@ -34,7 +34,7 @@ export default function Travel() {
     <div className="max-w-5xl mx-auto px-4 text-center">
       <h2 className="text-3xl font-semibold mb-6">Travel</h2>
       <p className="text-neutral-400 text-lg mb-4">
-        I love to travel and explore new places and food. Here are some of my favorite destinations 📍
+        I love to travel and explore new places and food. Here are some of my favorite destinations 📍Click the pin location to see the images! 
       </p>
 
       <div className="flex justify-center items-center w-full h-[500px] rounded-xl overflow-hidden mb-10 bg-black">
